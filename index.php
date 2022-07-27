@@ -9,6 +9,7 @@
     <title>Teste prático</title>
 </head>
 
+
 <body>
 
     <section class="header">
@@ -21,13 +22,29 @@
     </section>
 
     <section class="content">
-        <a href="#">
-            <ul class="container-list">
-                <li>
-                    Davi Ferreira de Sena
-                </li>
-            </ul>
-        </a>
+
+        <ul class="container-list">
+
+            <?php
+            require_once("autoload.php");
+
+            use Controller\Controller_Operator;
+
+            $instanceController = new Controller_Operator;
+            $operators = $instanceController->getAll();
+            foreach ($operators as $operator) {
+            ?>
+                <a href="view/public/profileOperator.php?<?php echo $operator['id'] ?>">
+                    <li>
+                        <?php echo $operator['name'] ?>
+                    </li>
+                </a>
+
+            <?php
+            }
+            ?>
+        </ul>
+
     </section>
 
 
