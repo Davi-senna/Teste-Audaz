@@ -16,7 +16,7 @@
             <h1 class="big-title">Operadoras</h1>
         </div>
         <div class="container-link">
-            <a href="form-operator.php">Adicionar +</a>
+            <a href="view/public/form-operator.php">Adicionar +</a>
         </div>
     </section>
 
