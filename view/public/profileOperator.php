@@ -47,9 +47,12 @@
 
             <ul id="list-fare">
                 <?php foreach ($fares as $fare) { ?>
-                    <li onmouseenter="teste()">
-                        <span class="item-list-fare">R$ <?php echo $fare['value']?></span>
-                        <button class="hidden-ativo" id="btn-disable">Desativar</button>
+                    <li onmouseleave="replace('btn-disable<?php echo $fare['id']?>','item-list-fare<?php echo $fare['id']?>')">
+
+                        <span onmouseenter="replace('item-list-fare<?php echo $fare['id']?>','btn-disable<?php echo $fare['id']?>')"  id="item-list-fare<?php echo $fare['id']?>" class="item-list-fare">R$ <?php echo $fare['value']?></span>
+
+                        <button class="hidden-ativo btn-disable" id="btn-disable<?php echo $fare['id']?>">Desativar</button>
+
                     </li>
                 <?php } ?>
             </ul>

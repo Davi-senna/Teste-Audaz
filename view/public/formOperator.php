@@ -23,12 +23,12 @@
             <form action="#">
                 <div class="container-form">
                     <div class="form-group">
-                        <label for="nome">Nome da operadora:</label>
-                        <input class="input-form" type="text" required placeholder="Digite o nome da operadora" name="nome" id="nome">
+                        <label for="name">Nome da operadora:</label>
+                        <input class="input-form" type="text" required placeholder="Digite o nome da operadora" name="name" id="name">
                     </div>
                     
                     <div class="form-group">
-                        <textarea placeholder="Descrição" name="" id="" cols="30" rows="10"></textarea>
+                        <textarea placeholder="Descrição" name="description" id="description" cols="30" rows="10"></textarea>
                     </div>
 
                     <div class="form-group">

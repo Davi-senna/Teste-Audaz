@@ -161,7 +161,7 @@ button:hover{
     margin-top: 4vh;
 }
 
-#btn-disable{
+.btn-disable{
     background-color:transparent;
     color: rgb(255, 255, 255);
     width: 80px;
@@ -170,7 +170,7 @@ button:hover{
     border: solid 1px rgb(255, 255, 255);
 }
 
-#btn-disable:hover{
+.btn-disable:hover{
     background-color:rgb(255, 0, 0);
     color: rgb(255, 255, 255);
     width: 80px;
