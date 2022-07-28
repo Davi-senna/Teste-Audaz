@@ -77,6 +77,31 @@ class Fare{
 
     //...Select methods
 
+    //Execution methods...
+
+        public function insertFare($value,$id_operator){
+                
+            try{
+
+                $this->sql->execQuery("CALL insertFare($value,$id_operator,1,@success)");
+                $results = $this->sql->select("SELECT @success");
+                return[
+                    "success" => $results,
+                ];
+
+            }catch(Exception $e){
+
+                return [
+                    "success" => false,
+                    "error" => $e->getMessage()
+                ];
+
+            }
+
+        }
+
+    //...Execution methods
+
     public function __construct(){
         $this->sql = new sql();
     }
