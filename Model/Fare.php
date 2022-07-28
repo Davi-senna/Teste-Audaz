@@ -85,9 +85,35 @@ class Fare{
 
                 $this->sql->execQuery("CALL insertFare($value,$id_operator,1,@success)");
                 $results = $this->sql->select("SELECT @success");
-                return[
-                    "success" => $results,
+                if($results[0]["@success"]){
+                    return[
+                        "success" => 1,
+                    ];
+                }else{
+                    throw new Exception("Tarifa já existe");
+                }
+                
+
+            }catch(Exception $e){
+
+                return [
+                    "success" => false,
+                    "error" => $e->getMessage()
                 ];
+
+            }
+
+        }
+
+        public function deleteFare($id_operator,$id){
+                
+            try{
+
+                $this->sql->execQuery("DELETE FROM fare where id_operator=$id_operator AND id = $id");
+
+                return[
+                    "success" => 1,
+                ]; 
 
             }catch(Exception $e){
 

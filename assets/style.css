@@ -186,3 +186,7 @@ button:hover{
 .item-list-fare{
     cursor: pointer;
 }
+
+.link-delete{
+    text-align: center;
+}

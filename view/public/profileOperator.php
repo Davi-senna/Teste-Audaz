@@ -51,7 +51,7 @@
 
                         <span onmouseenter="replace('item-list-fare<?php echo $fare['id']?>','btn-disable<?php echo $fare['id']?>')"  id="item-list-fare<?php echo $fare['id']?>" class="item-list-fare">R$ <?php echo $fare['value']?></span>
 
-                        <button class="hidden-ativo btn-disable" id="btn-disable<?php echo $fare['id']?>">Desativar</button>
+                        <a class="link-delete" href="../view_fare.php?stmt=delete&&id_operator=<?php echo $fare['id_operator']?>&&id=<?php echo $fare['id']?>"><div class="hidden-ativo btn-disable" id="btn-disable<?php echo $fare['id']?>">Desativar</div></a>
 
                     </li>
                 <?php } ?>

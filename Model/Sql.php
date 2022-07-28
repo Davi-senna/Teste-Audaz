@@ -12,15 +12,15 @@ class Sql extends PDO{
         $this->conn = new PDO("mysql:host=localhost; dbname=audaz", "root", "");
     }
 
-    public function execQuery($rawQuery, $params = array()){
+    public function execQuery($rawQuery){
         $stmt = $this->conn->prepare($rawQuery);
         $stmt->execute();
         return $stmt;
     }
 
-    public function select($rawQuery, $params = array()): array{
+    public function select($rawQuery): array{
 
-        $stmt = $this->execQuery($rawQuery, $params);
+        $stmt = $this->execQuery($rawQuery);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 

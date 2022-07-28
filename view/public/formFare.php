@@ -10,34 +10,43 @@
 </head>
 
 <body>
+    <?php
 
-    <section class="content">
+    if (isset($_GET['operator'])) {
 
-        <div class="card-form">
+    ?>
+        <section class="content">
 
-            <div class="container-h1" id="title-fare">
-                <h1>Cadastro de Tarifa</h1>
+            <div class="card-form">
+
+                <div class="container-h1" id="title-fare">
+                    <h1>Cadastro de Tarifa</h1>
+                </div>
+
+
+                <form action="../view_fare.php" method="post">
+                    <div id="form-fare" class="container-form">
+                        <div class="form-group">
+                            <label for="nome">Valor da tarifa:</label>
+                            <input class="input-form" type="number" step="any" required placeholder="Digite o nome da operadora" name="value" id="value">
+                            <input type="hidden" name="id_operator" value="<?php echo $_GET['operator']?>">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="button-submit" type="submit">Cadastrar</button>
+                        </div>
+                    </div>
+                </form>
+
+
             </div>
 
+        </section>
+    <?php
 
-            <form action="#">
-                <div id="form-fare" class="container-form">
-                    <div class="form-group">
-                        <label for="nome">Valor da tarifa:</label>
-                        <input class="input-form" type="number" min="0" required placeholder="Digite o nome da operadora" name="nome" id="nome">
-                    </div>
-                    
-                    <div class="form-group">
-                        <button class="button-submit" type="submit">Cadastrar</button>
-                    </div>
-                </div>
-            </form>
+    }
 
-
-        </div>
-
-    </section>
-
+    ?>
 </body>
 
 </html>
