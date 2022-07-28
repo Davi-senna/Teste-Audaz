@@ -126,7 +126,7 @@ textarea{
     padding: 1vw;
 }
 
-button{
+.button-submit{
     width: 500px;
     height: 25px;
     margin: 15px 0 0 100px;
@@ -148,6 +148,8 @@ button:hover{
 
 #list-fare{
     margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #list-fare li{
@@ -157,4 +159,30 @@ button:hover{
 
 #form-fare,#title-fare{
     margin-top: 4vh;
+}
+
+#btn-disable{
+    background-color:transparent;
+    color: rgb(255, 255, 255);
+    width: 80px;
+    height: 25px;
+    border-radius: 10px;
+    border: solid 1px rgb(255, 255, 255);
+}
+
+#btn-disable:hover{
+    background-color:rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    width: 80px;
+    height: 25px;
+    border-radius: 10px;
+    border: solid 1px rgb(255, 255, 255);
+}
+
+.hidden-ativo{
+    display: none;
+}
+
+.item-list-fare{
+    cursor: pointer;
 }

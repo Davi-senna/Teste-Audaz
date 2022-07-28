@@ -32,7 +32,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button type="submit">Cadastrar</button>
+                        <button class="button-submit"type="submit">Cadastrar</button>
                     </div>
                 </div>
             </form>

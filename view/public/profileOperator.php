@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/style.css">
+    <script src="../../assets/js/script.js"></script>
     <title>Teste prático</title>
 </head>
 
@@ -40,11 +41,9 @@
             </h1>
 
             <ul id="list-fare">
-                <li>
-                    R$ 200,00
-                </li>
-                <li>
-                    R$ 400,00
+                <li onmouseenter="teste()">
+                    <span class="item-list-fare">R$ 200,00</span>
+                    <button class="hidden-ativo" id="btn-disable">Desativar</button>
                 </li>
             </ul>
         </section>
