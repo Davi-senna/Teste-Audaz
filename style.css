@@ -22,6 +22,7 @@ body {
     align-items: center;
     margin-top: 20px;
     color: rgb(255, 255, 255);
+    justify-content: space-between;
 }
 
 a {
@@ -34,8 +35,13 @@ a {
 }
 
 .container-h1 {
-    width: 65%;
     display: flex;
+    justify-content: center;
+}
+
+#container-big-title{
+    display: flex;
+    width:65%;
     justify-content: flex-end;
 }
 
@@ -124,4 +130,31 @@ button{
     width: 500px;
     height: 25px;
     margin: 15px 0 0 100px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#header-profile{
+    padding: 0 8vw;
+}
+
+#content-profile{
+    width: 100%;
+    padding: 10vh 8vw;
+    color: rgb(255, 255, 255);
+}
+
+#list-fare{
+    margin-top: 4vh;
+}
+
+#list-fare li{
+    margin: 0 0 2vh 3vw;
+    
+}
+
+#form-fare,#title-fare{
+    margin-top: 4vh;
 }

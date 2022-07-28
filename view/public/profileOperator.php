@@ -11,7 +11,46 @@
 
 <body>
 
-    
+    <?php
+
+    use Controller\Controller_Operator;
+
+
+    if (isset($_GET['id'])) {
+
+        require_once("../../autoload.php");
+        $instanceController = new Controller_Operator;
+        $results = $instanceController->getOperator($_GET['id']);
+        $operator = $results[0]
+
+    ?>
+
+        <section id="header-profile" class="header">
+            <div>
+                <h1 class="big-title"><?php echo $operator['name'] ?></h1>
+            </div>
+            <div class="container-link">
+                <a href="formFare.php?operator=<?php echo $operator['id'] ?>">Adicionar Tarifa +</a>
+            </div>
+        </section>
+
+        <section id="content-profile">
+            <h1>
+                Tarifas ativas:
+            </h1>
+
+            <ul id="list-fare">
+                <li>
+                    R$ 200,00
+                </li>
+                <li>
+                    R$ 400,00
+                </li>
+            </ul>
+        </section>
+
+
+    <?php } ?>
 
 </body>
 

@@ -13,11 +13,11 @@
 <body>
 
     <section class="header">
-        <div class="container-h1">
+        <div id="container-big-title">
             <h1 class="big-title">Operadoras</h1>
         </div>
         <div class="container-link">
-            <a href="view/public/form-operator.php">Adicionar +</a>
+            <a href="view/public/formOperator.php">Adicionar +</a>
         </div>
     </section>
 
@@ -34,7 +34,7 @@
             $operators = $instanceController->getAll();
             foreach ($operators as $operator) {
             ?>
-                <a href="view/public/profileOperator.php?<?php echo $operator['id'] ?>">
+                <a href="view/public/profileOperator.php?id=<?php echo $operator['id'] ?>">
                     <li>
                         <?php echo $operator['name'] ?>
                     </li>
