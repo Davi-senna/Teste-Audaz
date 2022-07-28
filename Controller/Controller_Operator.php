@@ -22,6 +22,19 @@ class Controller_Operator{
 
     //...Select methods
 
+    //Exception methods...
+
+        public function setOperator($data){
+
+            extract($data);
+
+            $results = $this->instanceModel->insertOperator($name,$description);
+
+            return $results;
+        }
+
+    //...Exception methods
+
     public function __construct(){
         $this->instanceModel = new Operator();
     }

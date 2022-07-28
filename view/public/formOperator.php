@@ -20,7 +20,7 @@
             </div>
 
 
-            <form action="#">
+            <form action="../view_operator.php" method="post">
                 <div class="container-form">
                     <div class="form-group">
                         <label for="name">Nome da operadora:</label>

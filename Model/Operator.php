@@ -107,6 +107,46 @@ class Operator{
 
     //...Select methods
 
+    //Fedding methods...
+
+        protected function feed_class($name,$description){
+            $this->setName($name);
+            $this->setDescription($description);
+        }
+
+    //...Fedding methods
+
+    //Execution methods...
+
+        public function insertOperator($raw_name,$raw_description){
+            
+            try{
+
+                $this->feed_class($raw_name,$raw_description);
+                $data = $this->loadData();
+                extract($data);
+
+                $this->sql->execQuery("INSERT INTO operator (name,description) VALUES('$name','$description')");
+
+                return[
+                    "success" => true,
+                ];
+
+            }catch(Exception $e){
+
+                return [
+                    "success" => false,
+                    "error" => $e->getMessage()
+                ];
+
+            }
+
+        }
+
+    //...Execution methods
+
+
+
     public function __construct(){
         $this->sql = new sql();
     }
