@@ -15,14 +15,19 @@
     <?php
 
     use Controller\Controller_Operator;
+    use Controller\Controller_Fare;
 
 
     if (isset($_GET['id'])) {
 
         require_once("../../autoload.php");
-        $instanceController = new Controller_Operator;
-        $results = $instanceController->getOperator($_GET['id']);
-        $operator = $results[0]
+        $instanceController_Operator = new Controller_Operator;
+        $instanceController_Fare = new Controller_Fare;
+
+        $results = $instanceController_Operator->getOperator($_GET['id']);
+        $operator = $results[0];
+
+        $fares = $instanceController_Fare->getFares($_GET['id']);
 
     ?>
 
@@ -41,10 +46,12 @@
             </h1>
 
             <ul id="list-fare">
-                <li onmouseenter="teste()">
-                    <span class="item-list-fare">R$ 200,00</span>
-                    <button class="hidden-ativo" id="btn-disable">Desativar</button>
-                </li>
+                <?php foreach ($fares as $fare) { ?>
+                    <li onmouseenter="teste()">
+                        <span class="item-list-fare">R$ <?php echo $fare['value']?></span>
+                        <button class="hidden-ativo" id="btn-disable">Desativar</button>
+                    </li>
+                <?php } ?>
             </ul>
         </section>
 
